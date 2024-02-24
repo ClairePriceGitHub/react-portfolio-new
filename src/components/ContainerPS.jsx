@@ -1,14 +1,14 @@
 import React from 'react';
-import Card from './CardPA';
+import CardPS from './CardPS';
 
 function ContainerPS( {jsonData} ) {
     return (
         <div>
             {jsonData.map((item, index) => (
-                <Card key={index} data={item} />
+                <CardPS key={index} data={item} />
             ))}
         </div>
     );
 }
 
-export default ContainerPA;
+export default ContainerPS;

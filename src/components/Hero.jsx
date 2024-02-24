@@ -4,9 +4,9 @@ import hero from '../assets/images/hero.png';
 
 function Hero() {
     return (
-        <div className='hero'>
+        <div>
             <img src={hero} alt='Black and white abstract image' />
-            <h1 className="text-8xl underline">Claire Price</h1>
+            <h1>Claire Price</h1>
         </div>
     )
 }

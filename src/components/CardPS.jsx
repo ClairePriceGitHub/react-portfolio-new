@@ -1,7 +1,10 @@
 import React from 'react';
 
 
-function CardPA({ data }) {
+function CardPS({ data }) {
+
+    
+
     return (
         <div>
             <img scr={data.image} />
@@ -12,4 +15,4 @@ function CardPA({ data }) {
     );
 }
 
-export default CardPA;
+export default CardPS;
