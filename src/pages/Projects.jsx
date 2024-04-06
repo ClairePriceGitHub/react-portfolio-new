@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ContainerPA from '../components/ContainerPA';
+import ContainerPA from '../components/Container';
 
-function ProjectAll() {
+function Projects() {
    const [jsonData, setJsonData] = useState([]);
 
    useEffect(() => {
@@ -11,17 +11,11 @@ function ProjectAll() {
     .catch((error) => console.error('Error fetching data: ', error));
    }, []);
 
-   
-
-
-
-  
-
     return (
-        <div>
-           <ContainerPA jsonData={jsonData} />
-        </div>
+        <>
+           <ContainerPA jsonData={ jsonData } />
+        </>
     );
 }
 
-export default ProjectAll;
+export default Projects;
