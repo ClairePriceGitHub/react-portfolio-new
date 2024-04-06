@@ -1,28 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import ContainerPS from '../components/ContainerPS';
-import CardPS from '../components/CardPS';
+import React from 'react';
+import { useLocation } from "react-router-dom";
 
-function ProjectSelected() {
-//    const [jsonData, setJsonData] = useState([]);
+function projectSelected() {
 
-//    useEffect(() => {
-//     fetch('/project-data.json')
-//     .then((response) => response.json())
-//     .then((data) => setJsonData(data))
-//     .catch((error) => console.error('Error fetching data: ', error));
-//    }, []);
+    const location = useLocation();
+    const data = location.state;
 
     return (
         <div>
-           {/* <ContainerPS jsonData={jsonData} />
-           <Card key={index} data={item} /> */}
-           <p>link test</p>
-           < CardPS />
-
-
-
+            <p>{data.title}</p>
         </div>
     );
 }
 
-export default ProjectSelected;
+export default projectSelected;

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../index.css'
 
 
 function Contact() {
@@ -6,22 +7,22 @@ function Contact() {
         
         <section>
   <div>
-      <h2>Contact Us</h2>
+      <h1>Contact Us</h1>
       <p>Please get in touch!</p>
       <form action="#">
           <div>
-              <label htmlFor="email" >Your email</label>
+              <label htmlFor="email" ><p>Your email</p></label>
               <input type="email" id="email" placeholder="your.name@email.com" required />
           </div>
           <div>
-              <label htmlFor="subject">Subject</label>
+              <label htmlFor="subject"><p>Subject</p></label>
               <input type="text" id="subject" placeholder="subject" required />
           </div>
           <div >
-              <label htmlFor="message" >Your message</label>
+              <label htmlFor="message" ><p>Your message</p></label>
               <textarea id="message" rows="6" placeholder="your message"></textarea>
           </div>
-          <button type="submit" >Send message</button>
+          <button type="submit" ><p>Send</p></button>
       </form>
   </div>
 </section>

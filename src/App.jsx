@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import  Home from './pages/Home';
 import  ProjectAll from './pages/ProjectAll';
 import  ProjectSelected from './pages/ProjectSelected';
@@ -10,9 +11,33 @@ import Footer from './components/Footer';
 // import Wrapper from './components/Wrapper';
 
 
+
+
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element={<Home/>} >
+//         <Route path="/Projects" element={<ProjectAll/>} />
+//         <Route path="/Detail" element={<ProjectSelected/>} />
+//         <Route path="/Contact" element={<Contact/>} />
+//     </Route>
+//   )
+// )
+
+// function App({router}) {
+//   return (
+//     <>
+//       <RouterProvider router={router} />
+//     </>
+//   );
+// }
+
+
+
+
+
 function App() {
   return (
-    <Router>
+    
       <div>
         <Header />
         {/* <Wrapper> */}
@@ -25,7 +50,11 @@ function App() {
         {/* </Wrapper> */}
         <Footer />
       </div>
-    </Router>
+    
+
+
+    
+
   
   );
 }
