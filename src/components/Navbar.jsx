@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from "styled-components";
+import styled from 'styled-components';
 import '../index.css'
 
 
@@ -27,6 +27,8 @@ function Navbar() {
 
 const Wrapper = styled.div`
     background-color: lightgrey;
+    border-left: 20px solid black;
+    border-right: 20px solid black;
     `;
 
 const ListWrapper = styled.ul`
@@ -35,6 +37,7 @@ const ListWrapper = styled.ul`
     justify-content: center;
     text-align: center;
     list-style: none;
+    margin: 0px;
     padding-inline-start: 0px;
     `;
 

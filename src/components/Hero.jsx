@@ -1,5 +1,6 @@
 import React from 'react';
 import hero from '../assets/images/hero.png';
+import styled from 'styled-components';
 
 
 function Hero() {

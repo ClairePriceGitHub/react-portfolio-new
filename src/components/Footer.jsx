@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from "styled-components";
+import styled from 'styled-components';
 import iconEmail from '../assets/images/logo-email.png';
 import iconGithub from '../assets/images/logo-github.png';
 import iconLinkedin from '../assets/images/logo-linkedin.png';
-
 
 function Footer() {
     return (
@@ -18,11 +17,10 @@ function Footer() {
     );
 }
 
-
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    background-color: none;
+    background-color: black;
     `;
 
 const Inner = styled.div`
@@ -35,6 +33,5 @@ const Inner = styled.div`
 const Image = styled.img`
     height: 40px;
     `;
-
 
 export default Footer;
