@@ -16,8 +16,6 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-left: 20px solid black;
-    border-right: 20px solid black;
     `;
 
 export default Container;

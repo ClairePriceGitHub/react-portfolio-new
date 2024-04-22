@@ -1,6 +1,7 @@
 import React from 'react';
 // import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
 import  Home from './pages/Home';
 import  ProjectAll from './pages/Projects';
 import  ProjectSelected from './pages/Project';
@@ -40,23 +41,29 @@ function App() {
     
       <div>
         <Header />
-        {/* <Wrapper> */}
+        <Wrapper>
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/Projects" element={<ProjectAll/>} />
             <Route path="/Detail" element={<ProjectSelected/>} />
             <Route path="/Contact" element={<Contact/>} />
           </Routes>
-        {/* </Wrapper> */}
+        </Wrapper>
         <Footer />
       </div>
     
-
+     
 
     
 
   
   );
 }
+
+const Wrapper = styled.div`
+  border-left: 20px solid black;
+  border-right: 20px solid black;
+
+`;
 
 export default App;
