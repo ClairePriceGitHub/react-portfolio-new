@@ -2,44 +2,44 @@
         {
             "ID": "1",
             "title": "Weather Dashboard",
-            "linkDeployed": "https://clairepricegithub.github.io/weather-dashboard/",
-            "linkRepo": "https://github.com/ClairePriceGitHub/weather-dashboard",
-            "image": ""
+            "linkDeployed": "https://priceclaire.github.io/weather-dashboard/",
+            "linkRepo": "https://github.com/priceclaire/weather-dashboard",
+            "image": "logo-email.png"
         },
         {
             "ID": "2",
             "title": "Team Profile Generator",
-            "linkDeployed": "https://clairepricegithub.github.io/team-profile-generator/",
-            "linkRepo": "https://github.com/ClairePriceGitHub/team-profile-generator",
-            "image": ""
+            "linkDeployed": "https://priceclaire.github.io/team-profile-generator/",
+            "linkRepo": "https://github.com/priceclaire/team-profile-generator",
+            "image": "logo-email.png"
         },
         {
             "ID": "3",
             "title": "Work Day Scheduler",
-            "linkDeployed": "https://clairepricegithub.github.io/work-day-scheduler/",
-            "linkRepo": "https://github.com/ClairePriceGitHub/work-day-scheduler",
-            "image": ""
+            "linkDeployed": "https://priceclaire.github.io/work-day-scheduler/",
+            "linkRepo": "https://github.com/priceclaire/work-day-scheduler",
+            "image": "logo-email.png"
         },
         {
             "ID": "4",
             "title": "Readme Generator",
             "linkDeployed": "",
-            "linkRepo": "https://github.com/ClairePriceGitHub/readme-generator",
-            "image": ""
+            "linkRepo": "https://github.com/priceclaire/readme-generator",
+            "image": "logo-email.png"
         },
         {
             "ID": "5",
             "title": "Password Generator",
-            "linkDeployed": "https://clairepricegithub.github.io/password-generator/",
-            "linkRepo": "https://github.com/ClairePriceGitHub/password-generator",
-            "image": ""
+            "linkDeployed": "https://priceclaire.github.io/password-generator/",
+            "linkRepo": "https://github.com/priceclaire/password-generator",
+            "image": "logo-email.png"
         },
         {
             "ID": "6",
             "title": "SEO & Accessibility",
-            "linkDeployed": "https://clairepricegithub.github.io/seo-and-accessibility/",
-            "linkRepo": "https://github.com/ClairePriceGitHub/seo-and-accessibility",
-            "image": ""
+            "linkDeployed": "https://priceclaire.github.io/seo-and-accessibility/",
+            "linkRepo": "https://github.com/priceclaire/seo-and-accessibility",
+            "image": "logo-email.png"
         }
     ]
 
