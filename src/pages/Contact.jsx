@@ -29,7 +29,7 @@ function Contact() {
                     </Subject>
                     <Message>
                         <label htmlFor="message" ><p>Your message *</p></label>
-                        <MessageBox id="message" rows="10" placeholder=""></MessageBox>
+                        <MessageBox id="message" rows="8" placeholder=""></MessageBox>
                     </Message>
                     <Button>
                         <button type="submit" ><p>Send</p></button>
@@ -60,8 +60,10 @@ const MessageBox = styled.textarea`
 width: 100%;
 border: 2px solid black;
 resize: none;
+margin: 20px 0px;
 `;
 
+// Grid areas
 const FirstName = styled.div`
 grid-area: firstName;
 padding-right: 20px;

@@ -1,45 +1,45 @@
 [
         {
             "ID": "1",
-            "title": "Weather Dashboard",
+            "title": "Sunny",
             "linkDeployed": "https://priceclaire.github.io/weather-dashboard/",
             "linkRepo": "https://github.com/priceclaire/weather-dashboard",
-            "image": "logo-email.png"
+            "image": "card-sun.png"
         },
         {
             "ID": "2",
-            "title": "Team Profile Generator",
-            "linkDeployed": "https://priceclaire.github.io/team-profile-generator/",
-            "linkRepo": "https://github.com/priceclaire/team-profile-generator",
-            "image": "logo-email.png"
+            "title": "Lyric Jam",
+            "linkDeployed": "https://priceclaire.github.io/weather-dashboard/",
+            "linkRepo": "https://github.com/priceclaire/weather-dashboard",
+            "image": "card-notes.png"
         },
         {
             "ID": "3",
-            "title": "Work Day Scheduler",
-            "linkDeployed": "https://priceclaire.github.io/work-day-scheduler/",
-            "linkRepo": "https://github.com/priceclaire/work-day-scheduler",
-            "image": "logo-email.png"
+            "title": "Weather Dashboard",
+            "linkDeployed": "https://priceclaire.github.io/weather-dashboard/",
+            "linkRepo": "https://github.com/priceclaire/weather-dashboard",
+            "image": "card-weather.png"
         },
         {
             "ID": "4",
-            "title": "Readme Generator",
-            "linkDeployed": "",
-            "linkRepo": "https://github.com/priceclaire/readme-generator",
-            "image": "logo-email.png"
+            "title": "Team Profile Generator",
+            "linkDeployed": "https://priceclaire.github.io/team-profile-generator/",
+            "linkRepo": "https://github.com/priceclaire/team-profile-generator",
+            "image": "card-team.png"
         },
         {
             "ID": "5",
-            "title": "Password Generator",
-            "linkDeployed": "https://priceclaire.github.io/password-generator/",
-            "linkRepo": "https://github.com/priceclaire/password-generator",
-            "image": "logo-email.png"
+            "title": "Work Day Scheduler",
+            "linkDeployed": "https://priceclaire.github.io/work-day-scheduler/",
+            "linkRepo": "https://github.com/priceclaire/work-day-scheduler",
+            "image": "card-clock.png"
         },
         {
             "ID": "6",
-            "title": "SEO & Accessibility",
-            "linkDeployed": "https://priceclaire.github.io/seo-and-accessibility/",
-            "linkRepo": "https://github.com/priceclaire/seo-and-accessibility",
-            "image": "logo-email.png"
+            "title": "Password Generator",
+            "linkDeployed": "",
+            "linkRepo": "https://github.com/priceclaire/readme-generator",
+            "image": "card-key.png"
         }
     ]
 
