@@ -15,14 +15,22 @@ function About() {
 }
 
 const Container = styled.div`
-    background-color: lightgrey;
+    background-color: #ffcc99;
     border: 20px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const Photo = styled.img`
     width: 200px;
     height: auto;
     filter: grayscale(60%);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    padding-top: 40px;
+    
 `;
 
 export default About;

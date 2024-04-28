@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 function Contact() {
     return (
-        <section>
+        <SectionWrapper>
             <Wrapper>
                 <Intro>
                     Please get in touch!
@@ -36,12 +36,17 @@ function Contact() {
                     </Button>
                 </ContactGrid>
             </Wrapper>
-        </section>
+        </SectionWrapper>
     );
 }
 
+const SectionWrapper = styled.div`
+    padding: 20px;
+`;
+
 const Wrapper = styled.div`
 padding: 40px 0px;
+background-color: #ffcc99;
 `;
 
 const Intro = styled.h3`

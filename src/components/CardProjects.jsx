@@ -19,16 +19,16 @@ function CardProjects(props) {
             <Image src={`./src/assets/images/${data.image}`} />
             <TextWrapper>
                 
-                <LinkA href={data.linkDeployed} target="_blank" rel="noreferrer noopener"><TextP>Deployed application</TextP></LinkA> 
-                <LinkA href={data.linkRepo} target="_blank" rel="noreferrer noopener"><TextP>GitHub repository</TextP></LinkA>
+                <LinkA href={data.linkDeployed} target="_blank" rel="noreferrer noopener"><TextP>Deployed Application</TextP></LinkA> 
+                <LinkA href={data.linkRepo} target="_blank" rel="noreferrer noopener"><TextP>GitHub Repository</TextP></LinkA>
             </TextWrapper>
-            <Button type="button" onClick={(e) => handleClick(e)}>MORE INFO</Button>
+            <Button type="button" onClick={(e) => handleClick(e)}><h3>MORE INFO</h3></Button>
         </Card>
     );
 }
 
 const Card = styled.div`
-    background-color: lightblue;
+    background-color: #feb186;
     border: 5px solid black;
     width: 25%;
     margin: 1% 1%;
@@ -49,7 +49,9 @@ const Image = styled.img`
 
 const TextWrapper = styled.div`
     background-color: none;
-    padding: 0px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     border-radius: 5px
     `;
 
@@ -64,18 +66,20 @@ text-align: center;
 `;
 
 const LinkA = styled.a`
-    text-decoration: none;
+    // text-decoration: none;
     `;
 
 const Button = styled.button`
     width: 90%;
     border: none;
     padding: 10px 0px;
-    background-color: yellow;
-    outline: 4px solid white;
+    background-color: lightgrey;
+    outline: 4px solid black;
+    padding: 0px;
     &:hover {
-        outline: 4px solid black;
-        background-color: lightgrey;
+        outline: 4px solid white;
+        background-color: #909090;
+        color: white
     }
 `;
 
