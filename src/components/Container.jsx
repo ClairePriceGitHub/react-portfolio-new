@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 50px 0px;
+    padding: 40px 0px;
     `;
 
 export default Container;

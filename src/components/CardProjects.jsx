@@ -15,19 +15,21 @@ function CardProjects(props) {
 
     return (
         <Card>
+            <TextH3>{data.title}</TextH3>
             <Image src={`./src/assets/images/${data.image}`} />
             <TextWrapper>
-                <TextP>{data.title}</TextP>
-                {/* <LinkA href={data.linkDeployed} target="_blank" rel="noreferrer noopener"><TextP>Deployed application</TextP></LinkA> */}
-                {/* <LinkA href={data.linkRepo} target="_blank" rel="noreferrer noopener"><TextP>GitHub repository</TextP></LinkA> */}
+                
+                <LinkA href={data.linkDeployed} target="_blank" rel="noreferrer noopener"><TextP>Deployed application</TextP></LinkA> 
+                <LinkA href={data.linkRepo} target="_blank" rel="noreferrer noopener"><TextP>GitHub repository</TextP></LinkA>
             </TextWrapper>
-            <Button type="button" onClick={(e) => handleClick(e)}>view project</Button>
+            <Button type="button" onClick={(e) => handleClick(e)}>MORE INFO</Button>
         </Card>
     );
 }
 
 const Card = styled.div`
-    background-color: grey;
+    background-color: lightblue;
+    border: 5px solid black;
     width: 25%;
     margin: 1% 1%;
     padding: 15px 0px;
@@ -35,12 +37,12 @@ const Card = styled.div`
     flex-direction: column;
     align-items: center;
     &:hover {
-        background-color: yellow;
+        
     }
     `;
 
 const Image = styled.img`
-    width: 40%;
+    width: 20%;
     height: auto;
     padding: 20px 0px;
 `;
@@ -51,10 +53,15 @@ const TextWrapper = styled.div`
     border-radius: 5px
     `;
 
-const TextP = styled.p`
+const TextH3 = styled.h3`
     color: black;
     text-align: center;
     `;
+
+const TextP = styled.p`
+color: black;
+text-align: center;
+`;
 
 const LinkA = styled.a`
     text-decoration: none;
@@ -64,6 +71,8 @@ const Button = styled.button`
     width: 90%;
     border: none;
     padding: 10px 0px;
+    background-color: yellow;
+    outline: 4px solid white;
     &:hover {
         outline: 4px solid black;
         background-color: lightgrey;

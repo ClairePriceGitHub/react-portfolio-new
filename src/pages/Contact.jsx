@@ -12,23 +12,23 @@ function Contact() {
                 </Intro>
                 <ContactGrid action="#">
                     <FirstName>
-                        <label htmlFor="firstName"><p>First Name *</p></label>
+                        <label htmlFor="firstName"><h3>First Name *</h3></label>
                         <Input type="text" id="firstName" placeholder="" required />
                     </FirstName>
                     <LastName>
-                        <label htmlFor="lastName"><p>Last Name *</p></label>
+                        <label htmlFor="lastName"><h3>Last Name *</h3></label>
                         <Input type="text" id="lastName" placeholder="" required />
                     </LastName>
                     <Email>
-                        <label htmlFor="email" ><p>Your email *</p></label>
+                        <label htmlFor="email" ><h3>Your email *</h3></label>
                         <Input type="email" id="email" placeholder="" required />
                     </Email>
                     <Subject>
-                        <label htmlFor="subject"><p>Subject *</p></label>
+                        <label htmlFor="subject"><h3>Subject *</h3></label>
                         <Input type="text" id="subject" placeholder="" required />
                     </Subject>
                     <Message>
-                        <label htmlFor="message" ><p>Your message *</p></label>
+                        <label htmlFor="message" ><h3>Your message *</h3></label>
                         <MessageBox id="message" rows="8" placeholder=""></MessageBox>
                     </Message>
                     <Button>
@@ -41,10 +41,10 @@ function Contact() {
 }
 
 const Wrapper = styled.div`
-padding: 50px 0px;
+padding: 40px 0px;
 `;
 
-const Intro = styled.p`
+const Intro = styled.h3`
 text-align: center;
 `;
 
@@ -53,12 +53,12 @@ width: 100%;
 border-left: none;
 border-right: none;
 border-top: none;
-border-bottom: 2px solid black;
+border-bottom: 4px solid black;
 `;
 
 const MessageBox = styled.textarea`
 width: 100%;
-border: 2px solid black;
+border: 4px solid black;
 resize: none;
 margin: 20px 0px;
 `;

@@ -33,7 +33,7 @@ function Navbar() {
 
 
 const Wrapper = styled.div`
-    background-color: lightgrey;
+    background-color: none;
     border-left: 20px solid black;
     border-right: 20px solid black;
     `;

@@ -10,7 +10,7 @@ function Footer() {
         <Wrapper>
             <Inner>
                 <Link to="" target="_blank" rel="noreferrer noopener"><Image src={iconEmail} alt='Email icon' /></Link>
-                <Link to="https://github.com/ClairePriceGitHub" target="_blank" rel="noreferrer noopener"><Image src={iconGithub} alt='GitHub icon' /></Link>
+                <Link to="https://github.com/priceclaire" target="_blank" rel="noreferrer noopener"><Image src={iconGithub} alt='GitHub icon' /></Link>
                 <Link to="https://www.linkedin.com/in/claire-price-a6847832/" target="_blank" rel="noreferrer noopener"><Image src={iconLinkedin} alt='LinkedIn icon' /></Link>
             </Inner>
         </Wrapper>
