@@ -24,15 +24,13 @@ function Hero() {
 
 const Container = styled.div`
     background-color: lightgrey;
+    height: calc(100vh - 180px);
     border-left: 20px solid white;
     border-right: 20px solid white;
 `;
 
 const wrapperAnimation = keyframes`
-    0% { justify-content: left; }
     
-  
-    100% { justify-content: center; }
 `;
 
 const Wrapper = styled.div`
@@ -47,18 +45,22 @@ const Wrapper = styled.div`
 
 const logo1Animation = keyframes`
     0% { transform: rotate(0deg); }
-    25% { transform: rotate(90deg); }
-    50% { transform: rotate(180deg); }
-    75% { transform: rotate(270deg); }
-    100% { transform: rotate(360deg); }
+    13% { transform: rotate(90deg); }
+    25% { transform: rotate(180deg); }
+    38% { transform: rotate(270deg); }
+    50% { transform: rotate(360deg); }
+    63% { transform: rotate(450deg); }
+    75% { transform: rotate(540deg) scale(0.7); }
+    88% { transform: rotate(630deg) scale(0.9); }
+    100% { transform: rotate(720deg); }
 `;
 
 const Logo1 = styled.img`
     animation-name: ${logo1Animation};
     animation-delay: 750ms;
     animation-timing-function: linear;
-    animation-duration: 2s;
-    animation-iteration-count: 2;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
 `;
 
 // const HeroImage = styled.img`

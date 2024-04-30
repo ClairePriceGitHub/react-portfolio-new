@@ -8,28 +8,31 @@ function Contact() {
         <SectionWrapper>
             <Wrapper>
                 <Intro>
+                    I would love to hear from you with work enquiries or general queries. 
+                </Intro>
+                <Intro>
                     Please get in touch!
                 </Intro>
                 <ContactGrid action="#">
                     <FirstName>
                         <label htmlFor="firstName"><h3>First Name *</h3></label>
-                        <Input type="text" id="firstName" placeholder="" required />
+                        <Input type="text" id="firstName" placeholder="" name="firstName" required />
                     </FirstName>
                     <LastName>
                         <label htmlFor="lastName"><h3>Last Name *</h3></label>
-                        <Input type="text" id="lastName" placeholder="" required />
+                        <Input type="text" id="lastName" placeholder="" name="lastName" required />
                     </LastName>
                     <Email>
                         <label htmlFor="email" ><h3>Your email *</h3></label>
-                        <Input type="email" id="email" placeholder="" required />
+                        <Input type="email" id="email" placeholder="" name="email" required />
                     </Email>
                     <Subject>
                         <label htmlFor="subject"><h3>Subject *</h3></label>
-                        <Input type="text" id="subject" placeholder="" required />
+                        <Input type="text" id="subject" placeholder="" name="subject" required />
                     </Subject>
                     <Message>
                         <label htmlFor="message" ><h3>Your message *</h3></label>
-                        <MessageBox id="message" rows="8" placeholder=""></MessageBox>
+                        <MessageBox id="message" rows="8" placeholder="" name="message" required></MessageBox>
                     </Message>
                     <Button>
                         <button type="submit" ><p>Send</p></button>
@@ -59,6 +62,7 @@ border-left: none;
 border-right: none;
 border-top: none;
 border-bottom: 4px solid black;
+background-color: transparent;
 `;
 
 const MessageBox = styled.textarea`
@@ -66,6 +70,7 @@ width: 100%;
 border: 4px solid black;
 resize: none;
 margin: 20px 0px;
+background: transparent;
 `;
 
 // Grid areas
