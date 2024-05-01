@@ -28,7 +28,7 @@ function CardProjects(props) {
 }
 
 const Card = styled.div`
-    background-color: #feb186;
+    background-color: ${({theme}) => theme.tertiaryDark};
     border: 5px solid black;
     width: 25%;
     margin: 1% 1%;
@@ -61,8 +61,8 @@ const TextH3 = styled.h3`
     `;
 
 const TextP = styled.p`
-color: black;
-text-align: center;
+    color: black;
+    text-align: center;
 `;
 
 const LinkA = styled.a`
@@ -73,12 +73,13 @@ const Button = styled.button`
     width: 90%;
     border: none;
     padding: 10px 0px;
-    background-color: lightgrey;
+    background-color: ${({theme}) => theme.secondaryLight};
     outline: 4px solid black;
     padding: 0px;
+
     &:hover {
         outline: 4px solid white;
-        background-color: #909090;
+        background-color: ${({theme}) => theme.secondaryDark};
         color: white
     }
 `;

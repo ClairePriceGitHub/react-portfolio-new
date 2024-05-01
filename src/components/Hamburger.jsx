@@ -4,19 +4,25 @@ import styled from 'styled-components';
 
 function Hamburger() {
     return (
-        <Wrapper>
+        <OuterWrapper>
+            <InnerWrapper>
                 <Burger />
                 <Burger />
                 <Burger />
-       </Wrapper>
+            </InnerWrapper>
+        </OuterWrapper>
     )
 }
 
-// const Wrapper = styled.div`
-// display: none;
-// `;
+const OuterWrapper = styled.ul`
+display: none;
 
-const Wrapper = styled.div`
+@media (max-width: 767px) {
+    display: block;
+}
+`;
+
+const InnerWrapper = styled.div`
 width: 2rem;
 height: 2rem;
 background-color: red;

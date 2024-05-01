@@ -20,7 +20,7 @@ function Footer() {
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    background-color: black;
+    background-color: ${({theme}) => theme.primaryDark};
     `;
 
 const Inner = styled.div`

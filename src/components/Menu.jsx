@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import '../index.css'
-import Hamburger from './Hamburger';
 
-
-function Navbar() {
+function Menu() {
     return (
         <nav>
-            <Wrapper>
+            <OuterWrapper>
 
-                <ListWrapper>
+                <InnerWrapper>
                     <li>
                         <Link to="/"><Header>HOME</Header></Link>
+                    </li>
+                    <li>
+                        <Link to="/About"><Header>ABOUT</Header></Link>
                     </li>
                     <li>
                         <Link to="/Projects"><Header>PROJECTS</Header></Link>
@@ -20,26 +20,26 @@ function Navbar() {
                     <li>
                         <Link to="/Contact"><Header>CONTACT</Header></Link>
                     </li>
-                </ListWrapper>
+                </InnerWrapper>
 
-                <BurgerWrapper>
-                    <Hamburger />
-                </BurgerWrapper>
-
-            </Wrapper>
+            </OuterWrapper>
         </nav>
     )
 }
 
-
-const Wrapper = styled.div`
+const OuterWrapper = styled.div`
+    display: block;
     background-color: none;
     height: 100px;
-    border-left: 20px solid black;
-    border-right: 20px solid black;
-    `;
+    border-left: ${({ theme }) => theme.primaryBorder};
+    border-right: ${({ theme }) => theme.primaryBorder};
+    
+    @media (max-width: 767px) {
+    display: none;
+    }
+`;
 
-const ListWrapper = styled.ul`
+const InnerWrapper = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,21 +47,11 @@ const ListWrapper = styled.ul`
     list-style: none;
     margin: 0px;
     padding-inline-start: 0px;
-    `;
+`;
 
 const Header = styled.h1`
     color: black;
     padding: 20px;
-    `;
-
-const BurgerWrapper = styled.ul`
-display: none;
-
-@media (max-width: 767px) {
-    display: block;
-}
 `;
 
-
-    
-export default Navbar;
+export default Menu;

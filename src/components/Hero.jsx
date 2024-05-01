@@ -23,7 +23,7 @@ function Hero() {
 }
 
 const Container = styled.div`
-    background-color: lightgrey;
+    background-color: ${({ theme }) => theme.secondaryLight};
     height: calc(100vh - 180px);
     border-left: 20px solid white;
     border-right: 20px solid white;

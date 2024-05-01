@@ -15,7 +15,7 @@ function About() {
 }
 
 const Container = styled.div`
-    background-color: #ffcc99;
+    background-color: ${({theme}) => theme.tertiaryLight};
     border: 20px solid white;
     display: flex;
     flex-direction: column;
