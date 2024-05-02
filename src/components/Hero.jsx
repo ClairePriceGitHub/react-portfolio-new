@@ -1,46 +1,37 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import cp from '../assets/images/logo-cp.png';
-import hero from '../assets/images/hero.png';
 
 
 function Hero() {
     return (
-        <div>
-            <Container>
-                <h1>CLAIRE</h1>
-                <Wrapper>
-                    <Logo1 src={cp} alt='Photo of Claire Price' />
-                    {/* <HeroImage src={hero} alt='Photo of Claire Price' /> */}
-                    {/* <Logo2 src={cp} alt='Photo of Claire Price' />
-                    <Logo3 src={cp} alt='Photo of Claire Price' /> */}
-                    {/* <Logo4 src={cp} alt='Photo of Claire Price' /> */}
-                </Wrapper>
+        <OuterWrapper>
+            <InnerWrapper>
+            <h1>CLAIRE</h1>
+                <Logo1 src={cp} alt='Photo of Claire Price' />
+                {/* <HeroImage src={hero} alt='Photo of Claire Price' /> */}
+                {/* <Logo2 src={cp} alt='Photo of Claire Price' />
+                <Logo3 src={cp} alt='Photo of Claire Price' /> */}
+                {/* <Logo4 src={cp} alt='Photo of Claire Price' /> */}
                 <h1>PRICE</h1>
-            </Container>
-        </div>
+            </InnerWrapper>
+        </OuterWrapper>
     )
 }
 
-const Container = styled.div`
+const OuterWrapper = styled.div`
     background-color: ${({ theme }) => theme.secondaryLight};
-    height: calc(100vh - 180px);
-    border-left: 20px solid white;
-    border-right: 20px solid white;
-`;
-
-const wrapperAnimation = keyframes`
-    
-`;
-
-const Wrapper = styled.div`
-    animation-name: ${wrapperAnimation};
-    animation-delay: 750ms;
-    animation-timing-function: linear;
-    animation-duration: 2s;
-    padding: 40px;
+    height: calc(100vh - 260px);
+    border: 20px solid white;
     display: flex;
     justify-content: center;
+    align-items: center;
+`;
+
+const InnerWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const logo1Animation = keyframes`
@@ -49,9 +40,10 @@ const logo1Animation = keyframes`
     25% { transform: rotate(180deg); }
     38% { transform: rotate(270deg); }
     50% { transform: rotate(360deg); }
-    63% { transform: rotate(450deg); }
+    63% { transform: rotate(450deg) scale(0.7); }
     75% { transform: rotate(540deg) scale(0.7); }
-    88% { transform: rotate(630deg) scale(0.9); }
+    88% { transform: rotate(630deg) scale(0.7); }
+    95% { transform: scale(0.9); }
     100% { transform: rotate(720deg); }
 `;
 
@@ -62,62 +54,5 @@ const Logo1 = styled.img`
     animation-duration: 1500ms;
     animation-iteration-count: 1;
 `;
-
-// const HeroImage = styled.img`
-//     width: 500px;
-// `;
-
-// const logo2Animation = keyframes`
-//     0% { opacity: 0; }
-//     25% { opacity: 0; }
-//     50% { opacity: 0.5; }
-//     75% { opacity: 0; }
-//     100% { opacity: 0; }
-// `;
-
-// const Logo2 = styled.img`
-//     position: absolute;
-//     opacity: 0;
-//     transform: rotate(90deg);
-//     animation-name: ${logo2Animation};
-//     animation-delay: 750ms;
-//     animation-duration: 2s;
-//     animation-iteration-count: 2;
-// `;
-
-// const logo3Animation = keyframes`
-//     0% { opacity: 0; }
-//     25% { opacity: 0; }
-//     50% { opacity: 0.0; }
-//     75% { opacity: 0.5; }
-//     100% { opacity: 0; }
-// `;
-
-// const Logo3 = styled.img`
-//     opacity: 0;
-//     transform: rotate(180deg);
-//     animation-name: ${logo3Animation};
-//     animation-delay: 750ms;
-//     animation-duration: 2s;
-//     animation-iteration-count: 2;
-`;
-
-// const Logo3 = styled.img`
-//     animation-name: ${logoAnimation};
-//     animation-delay: 750ms;
-//     animation-timing-function: linear;
-//     animation-duration: 2s;
-//     animation-iteration-count: 2;
-// `;
-
-// const Logo4 = styled.img`
-//     animation-name: ${logoAnimation};
-//     animation-delay: 750ms;
-//     animation-timing-function: linear;
-//     animation-duration: 2s;
-//     animation-iteration-count: 2;
-// `;
-
-
 
 export default Hero;

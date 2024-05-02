@@ -2,9 +2,9 @@ import React from 'react';
 import '../index.css'
 import styled from 'styled-components';
 
-function Hamburger() {
+function Hamburger({ open, setOpen }) {
     return (
-        <OuterWrapper>
+        <OuterWrapper open={open} onClick={() => setOpen(!open)}>
             <InnerWrapper>
                 <Burger />
                 <Burger />
@@ -13,6 +13,11 @@ function Hamburger() {
         </OuterWrapper>
     )
 }
+
+Hamburger.propTypes = {
+    open: bool.isRequired,
+    setOpen: func.isRequired,
+};
 
 const OuterWrapper = styled.ul`
 display: none;

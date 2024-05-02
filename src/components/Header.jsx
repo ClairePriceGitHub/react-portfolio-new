@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Menu from './Menu';
 import MenuMobile from './MenuMobile';
 import Hamburger from './Hamburger';
 
 function Header() {
+    const [open, setOpen] = useState(false);
     return (
         <>
             <Border />
             <Menu />
-            <Hamburger />
-            <MenuMobile />
+            <div>
+                <Hamburger open={open} setOpen={setOpen} />
+                <MenuMobile open={open} setOpen={setOpen} />
+            </div>
         </>
     )
 }

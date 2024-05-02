@@ -20,6 +20,7 @@ function Footer() {
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
+    height: 100px;
     background-color: ${({theme}) => theme.primaryDark};
     `;
 

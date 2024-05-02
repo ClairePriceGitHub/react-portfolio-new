@@ -1,10 +1,11 @@
 import React from 'react';
+import { bool } from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function MenuMobile() {
+function MenuMobile({ open }) {
     return (
-        <OuterWrapper>
+        <OuterWrapper open={open}>
             <InnerWrapper>
                     <li>
                         <Link to="/"><Header>HOME</Header></Link>
@@ -18,17 +19,22 @@ function MenuMobile() {
                     <li>
                         <Link to="/Contact"><Header>CONTACT</Header></Link>
                     </li>
-                </InnerWrapper>
+            </InnerWrapper>
         </OuterWrapper>
     )
 }
 
+MenuMobile.propTypes = {
+    open: bool.isRequired,
+};
+
 const OuterWrapper = styled.div`
-display: none;
+// display: none;
+transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 
 
 @media (max-width: 767px) {
-    display: block;
+    // display: block;
 }
 `;
 
