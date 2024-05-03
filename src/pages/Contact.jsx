@@ -45,6 +45,11 @@ function Contact() {
 
 const SectionWrapper = styled.div`
     padding: 20px;
+    height: calc(100vh - 260px);
+
+    @media (max-width: 767px) {
+        height: calc(100vh - 190px);
+    }
 `;
 
 const Wrapper = styled.div`

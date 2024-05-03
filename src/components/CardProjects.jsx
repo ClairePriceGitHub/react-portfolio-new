@@ -36,10 +36,11 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    &:hover {
-        
-    }
-    `;
+
+    // @media (max-width: 767px) {
+    //     flex-wrap: wrap;
+    // }
+`;
 
 const Image = styled.img`
     width: 20%;

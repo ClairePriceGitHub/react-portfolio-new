@@ -21,6 +21,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 767px) {
+        height: calc(100vh - 210px);
+    }
 `;
 
 const Photo = styled.img`
@@ -31,6 +35,7 @@ const Photo = styled.img`
     object-fit: cover;
     border-radius: 50%;
     padding-top: 40px;
+    
     
 `;
 

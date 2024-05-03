@@ -26,6 +26,10 @@ const OuterWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 767px) {
+        height: calc(100vh - 210px);
+    }
 `;
 
 const InnerWrapper = styled.div`

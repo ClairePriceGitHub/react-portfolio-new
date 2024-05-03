@@ -29,21 +29,27 @@ MenuMobile.propTypes = {
 };
 
 const OuterWrapper = styled.div`
-// display: none;
-transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+    display: none;
+    transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(-120%)'};
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 20px;
+    cursor: pointer;
+    Z-index: 10;
 
-
-@media (max-width: 767px) {
-    // display: block;
-}
+    @media (max-width: 767px) {
+    display: flex;
+    }
 `;
 
 const InnerWrapper = styled.ul`
     display: flex;
+    justify-content: left;
     flex-direction: column;
     text-align: left;
     list-style: none;
-    padding-inline-start: 0px;
 `;
 
 const Header = styled.h1`
