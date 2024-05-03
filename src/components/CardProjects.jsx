@@ -15,10 +15,9 @@ function CardProjects(props) {
 
     return (
         <Card>
-            <TextH3>{data.title}</TextH3>
+            <Title>{data.title}</Title>
             <Image src={`./src/assets/images/${data.image}`} />
             <TextWrapper>
-                
                 <LinkA href={data.linkDeployed} target="_blank" rel="noreferrer noopener"><TextP>Deployed Application</TextP></LinkA> 
                 <LinkA href={data.linkRepo} target="_blank" rel="noreferrer noopener"><TextP>GitHub Repository</TextP></LinkA>
             </TextWrapper>
@@ -30,16 +29,19 @@ function CardProjects(props) {
 const Card = styled.div`
     background-color: ${({theme}) => theme.tertiaryDark};
     border: 5px solid black;
-    width: 25%;
+    min-width: 25%;
     margin: 1% 1%;
-    padding: 15px 0px;
+    padding: 15px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    // @media (max-width: 767px) {
-    //     flex-wrap: wrap;
-    // }
+    @media (max-width: 767px) {
+        width: 40%;
+    }
+    @media (max-width: 580px) {
+        width: 80%;
+    }
 `;
 
 const Image = styled.img`
@@ -56,7 +58,7 @@ const TextWrapper = styled.div`
     border-radius: 5px
     `;
 
-const TextH3 = styled.h3`
+const Title = styled.h3`
     color: black;
     text-align: center;
     `;

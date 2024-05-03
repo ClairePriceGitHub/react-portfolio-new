@@ -7,18 +7,10 @@ function MenuMobile({ open }) {
     return (
         <OuterWrapper open={open}>
             <InnerWrapper>
-                    <li>
-                        <Link to="/"><Header>HOME</Header></Link>
-                    </li>
-                    <li>
-                        <Link to="/About"><Header>ABOUT</Header></Link>
-                    </li>
-                    <li>
-                        <Link to="/Projects"><Header>PROJECTS</Header></Link>
-                    </li>
-                    <li>
-                        <Link to="/Contact"><Header>CONTACT</Header></Link>
-                    </li>
+                    <li><StyledLink to="/"><Header>HOME</Header></StyledLink></li>
+                    <li><StyledLink to="/About"><Header>ABOUT</Header></StyledLink></li>
+                    <li><StyledLink to="/Projects"><Header>PROJECTS</Header></StyledLink></li>
+                    <li><StyledLink to="/Contact"><Header>CONTACT</Header></StyledLink></li>
             </InnerWrapper>
         </OuterWrapper>
     )
@@ -52,7 +44,11 @@ const InnerWrapper = styled.ul`
     list-style: none;
 `;
 
-const Header = styled.h1`
+const StyledLink = styled(Link)`
+    text-decoration: none;    
+`;
+
+const Header = styled.h2`
     color: black;
 `;
 

@@ -6,11 +6,11 @@ import cp from '../assets/images/logo-cp.png';
 function Menu() {
     return (
         <OuterWrapper>
-            <Link to="/"><Header><Logo src={cp} alt="Claire Price Logo" /></Header></Link>
+            <Link to="/"><Logo src={cp} alt="Claire Price Logo" /></Link>
             <InnerWrapper>
-                <li><Link to="/About"><Header>ABOUT</Header></Link></li>
-                <li><Link to="/Projects"><Header>PROJECTS</Header></Link></li>
-                <li><Link to="/Contact"><Header>CONTACT</Header></Link></li>
+                <li><StyledLink to="/About"><Header>ABOUT</Header></StyledLink></li>
+                <li><StyledLink to="/Projects"><Header>PROJECTS</Header></StyledLink></li>
+                <li><StyledLink to="/Contact"><Header>CONTACT</Header></StyledLink></li>
             </InnerWrapper>
         </OuterWrapper>
     )
@@ -19,7 +19,7 @@ function Menu() {
 const OuterWrapper = styled.nav`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     background-color: none;
     height: 100px;
     border-left: ${({ theme }) => theme.primaryBorder};
@@ -32,19 +32,37 @@ const OuterWrapper = styled.nav`
 
 const InnerWrapper = styled.ul`
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     list-style: none;
+    padding-right: 20px;
+`;
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
 `;
 
 const Header = styled.h1`
-    color: black;
-    padding: 20px;
+    color: ${({ theme }) => theme.primaryDark};;
+    padding-left: 20px;
+    padding-bottom: 10px;
+`;
+
+const logoAnimation = keyframes`
+    0% { transform: scale(0deg); }
+    25% { transform: scale(0deg); }
+    50% { transform: scale(0deg); }
+    75% { transform: scale(0deg); }
+    100% { transform: scale(0deg); }
 `;
 
 const Logo = styled.img`
+    animation-name: ${logoAnimation};
+    animation-delay: 750ms;
+    animation-timing-function: linear;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
     width: auto;    
-    height: 70px;
+    height: 80px;
+    padding-left: 20px;
 `;
 
 export default Menu;
