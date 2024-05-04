@@ -2,18 +2,17 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import cp from '../assets/images/logo-cp.png';
 
-
 function Hero() {
     return (
         <OuterWrapper>
             <InnerWrapper>
-            <h1>CLAIRE</h1>
-                <Logo1 src={cp} alt='Photo of Claire Price' />
+            <FirstName>CLAIRE</FirstName>
+                <Logo src={cp} alt='Photo of Claire Price' />
                 {/* <HeroImage src={hero} alt='Photo of Claire Price' /> */}
                 {/* <Logo2 src={cp} alt='Photo of Claire Price' />
                 <Logo3 src={cp} alt='Photo of Claire Price' /> */}
                 {/* <Logo4 src={cp} alt='Photo of Claire Price' /> */}
-                <h1>PRICE</h1>
+                <LastName>PRICE</LastName>
             </InnerWrapper>
         </OuterWrapper>
     )
@@ -33,12 +32,26 @@ const OuterWrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    ' firstName logo lastName ';
+
+    @media (max-width: 767px) {
+        display: grid;
+        
+        grid-template-columns: 1fr 20px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ' logo logo logo '
+        ' firstName . lastName ';
+    }
 `;
 
-const logo1Animation = keyframes`
+const logoAnimation = keyframes`
     0% { transform: rotate(0deg); }
     13% { transform: rotate(90deg); }
     25% { transform: rotate(180deg); }
@@ -51,12 +64,21 @@ const logo1Animation = keyframes`
     100% { transform: rotate(720deg); }
 `;
 
-const Logo1 = styled.img`
-    animation-name: ${logo1Animation};
+const FirstName = styled.h1`
+    grid-area: firstName;
+    text-align: right;
+`;
+const Logo = styled.img`
+// max-width: 1000px;
+    grid-area: logo;
+    animation-name: ${logoAnimation};
     animation-delay: 750ms;
     animation-timing-function: linear;
     animation-duration: 1500ms;
     animation-iteration-count: 1;
+`;
+const LastName = styled.h1`
+    grid-area: lastName;
 `;
 
 export default Hero;

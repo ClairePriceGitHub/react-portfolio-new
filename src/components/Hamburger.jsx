@@ -12,7 +12,7 @@ function Hamburger({ open, setOpen }) {
                 <div style={{
                     transform: open ? 'rotate(45deg)' : 'rotate(0)',
                     // backgroundColor: open ? 'black' : 'darkGrey',
-                    transformOrigin: '1px'
+                    transformOrigin: '1px',
                 }}/>
                 <div style={{
                     transform: open ? 'rotate(-45deg)' : 'rotate(0)',
@@ -50,6 +50,11 @@ const OuterWrapper = styled.div`
 const Logo = styled.img`
     width: 80px;
     flex: 1;
+
+    &:hover {
+        transform: scale(90%);
+        transform-origin: center;
+    }
 `;
 
 const InnerWrapper = styled.div`
@@ -59,6 +64,11 @@ const InnerWrapper = styled.div`
     flex-flow: column;
     flex: 1;
     justify-content: space-around;
+
+    // &:hover {
+    //     justify-content: space-evenly;
+    //     transform-origin: center;
+    // }
     
     div {
         width: 1.5rem;

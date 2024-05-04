@@ -33,6 +33,11 @@ const Inner = styled.div`
 
 const Image = styled.img`
     height: 40px;
+
+    &:hover {
+        transform: scale(90%);
+        transform-origin: center;
+    }
 `;
 
 export default Footer;

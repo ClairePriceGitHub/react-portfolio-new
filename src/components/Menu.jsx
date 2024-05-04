@@ -34,6 +34,13 @@ const InnerWrapper = styled.ul`
     display: flex;
     list-style: none;
     padding-right: ${({theme}) => theme.primarySpacing};
+
+    li {
+        &:hover {
+            transform: scale(90%);
+            transform-origin: center;
+        }
+    }
 `;
 
 const StyledLink = styled(Link)`
@@ -63,6 +70,11 @@ const Logo = styled.img`
     width: auto;    
     height: 80px;
     padding-left: ${({theme}) => theme.primarySpacing};
+
+    &:hover {
+        transform: scale(90%);
+        transform-origin: center;
+    }
 `;
 
 export default Menu;

@@ -40,6 +40,13 @@ const InnerWrapper = styled.ul`
     flex-direction: column;
     list-style: none;
     padding-inline-start: 20px;
+
+    li {
+        &:hover {
+            transform: scale(90%);
+            transform-origin: left;
+        }
+    }
 `;
 
 const StyledLink = styled(Link)`
