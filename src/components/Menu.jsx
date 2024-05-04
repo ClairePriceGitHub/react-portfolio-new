@@ -41,25 +41,25 @@ const StyledLink = styled(Link)`
 `;
 
 const Header = styled.h1`
-    color: ${({ theme }) => theme.primaryDark};;
+    color: ${({ theme }) => theme.primaryDark};
     padding-left: 20px;
     padding-bottom: 10px;
 `;
 
-const logoAnimation = keyframes`
-    0% { transform: scale(0deg); }
-    25% { transform: scale(0deg); }
-    50% { transform: scale(0deg); }
-    75% { transform: scale(0deg); }
-    100% { transform: scale(0deg); }
-`;
+// const logoAnimation = keyframes`
+//     0% { transform: scale(0deg); }
+//     25% { transform: scale(0deg); }
+//     50% { transform: scale(0deg); }
+//     75% { transform: scale(0deg); }
+//     100% { transform: scale(0deg); }
+// `;
 
 const Logo = styled.img`
-    animation-name: ${logoAnimation};
-    animation-delay: 750ms;
-    animation-timing-function: linear;
-    animation-duration: 1500ms;
-    animation-iteration-count: 1;
+    
+    // animation-delay: 750ms;
+    // animation-timing-function: linear;
+    // animation-duration: 1500ms;
+    // animation-iteration-count: 1;
     width: auto;    
     height: 80px;
     padding-left: 20px;

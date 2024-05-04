@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { bool } from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function MenuMobile({ open }) {
+function MenuMobile({ open, setOpen }) {
     return (
-        <OuterWrapper open={open}>
+        <OuterWrapper open={open} >
             <InnerWrapper>
-                    <li><StyledLink to="/"><Header>HOME</Header></StyledLink></li>
-                    <li><StyledLink to="/About"><Header>ABOUT</Header></StyledLink></li>
-                    <li><StyledLink to="/Projects"><Header>PROJECTS</Header></StyledLink></li>
-                    <li><StyledLink to="/Contact"><Header>CONTACT</Header></StyledLink></li>
+                    <li onClick={() => setOpen(!open)}><StyledLink to="/"><Header>HOME</Header></StyledLink></li>
+                    <li onClick={() => setOpen(!open)}><StyledLink to="/About"><Header>ABOUT</Header></StyledLink></li>
+                    <li onClick={() => setOpen(!open)}><StyledLink to="/Projects"><Header>PROJECTS</Header></StyledLink></li>
+                    <li onClick={() => setOpen(!open)}><StyledLink to="/Contact"><Header>CONTACT</Header></StyledLink></li>
             </InnerWrapper>
         </OuterWrapper>
     )
