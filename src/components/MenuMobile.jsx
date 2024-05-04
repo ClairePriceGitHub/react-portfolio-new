@@ -25,9 +25,7 @@ const OuterWrapper = styled.div`
     transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(-120%)'};
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 20px;
+    padding-right: ${({theme}) => theme.primarySpacing};
     cursor: pointer;
     Z-index: 10;
 
@@ -40,8 +38,8 @@ const InnerWrapper = styled.ul`
     display: flex;
     justify-content: left;
     flex-direction: column;
-    text-align: left;
     list-style: none;
+    padding-inline-start: 20px;
 `;
 
 const StyledLink = styled(Link)`

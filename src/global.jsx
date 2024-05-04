@@ -9,6 +9,6 @@ const GlobalStyles = createGlobalStyle`
     body {
         font-family: "Questrial", sans-serif;
     }
-    `
+    `;
 
 export default GlobalStyles;

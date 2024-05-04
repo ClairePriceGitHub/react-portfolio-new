@@ -22,17 +22,17 @@ const Wrapper = styled.div`
     justify-content: center;
     height: 100px;
     background-color: ${({theme}) => theme.primaryDark};
-    `;
+`;
 
 const Inner = styled.div`
     display: flex;
     justify-content: space-between;
     width: 150px;
     padding: 30px 0px;
-    `;
+`;
 
 const Image = styled.img`
     height: 40px;
-    `;
+`;
 
 export default Footer;

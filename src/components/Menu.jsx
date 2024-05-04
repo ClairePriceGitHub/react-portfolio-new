@@ -33,7 +33,7 @@ const OuterWrapper = styled.nav`
 const InnerWrapper = styled.ul`
     display: flex;
     list-style: none;
-    padding-right: 20px;
+    padding-right: ${({theme}) => theme.primarySpacing};
 `;
 
 const StyledLink = styled(Link)`
@@ -42,7 +42,7 @@ const StyledLink = styled(Link)`
 
 const Header = styled.h1`
     color: ${({ theme }) => theme.primaryDark};
-    padding-left: 20px;
+    padding-left: ${({theme}) => theme.primarySpacing};
     padding-bottom: 10px;
 `;
 
@@ -62,7 +62,7 @@ const Logo = styled.img`
     // animation-iteration-count: 1;
     width: auto;    
     height: 80px;
-    padding-left: 20px;
+    padding-left: ${({theme}) => theme.primarySpacing};
 `;
 
 export default Menu;

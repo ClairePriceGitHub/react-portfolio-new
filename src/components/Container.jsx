@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
-    `;
+    padding: ${({theme}) => theme.primarySpacing};
+`;
 
 export default Container;

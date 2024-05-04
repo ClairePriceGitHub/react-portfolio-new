@@ -23,8 +23,8 @@ function Header() {
 }
 
 const Border = styled.div`
-height: 20px;
-background-color: ${({ theme }) => theme.primaryDark};
+    height: ${({theme}) => theme.primarySpacing};
+    background-color: ${({ theme }) => theme.primaryDark};
 `;
 
 export default Header;

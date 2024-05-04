@@ -33,9 +33,9 @@ Hamburger.propTypes = {
 const OuterWrapper = styled.div`
     display: none;
     height: 80px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: ${({theme}) => theme.primarySpacing};
+    padding-left: ${({theme}) => theme.primarySpacing};
+    padding-right: ${({theme}) => theme.primarySpacing};
     border-left: ${({ theme }) => theme.primaryBorder};
     border-right: ${({ theme }) => theme.primaryBorder};
 

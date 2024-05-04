@@ -6,5 +6,6 @@ export const theme = {
     tertiaryDark: '#feb186',
     tertiaryLight: '#ffcc99',
     primaryBorder: '20px solid black',
+    primarySpacing: '20px',
 }
 
