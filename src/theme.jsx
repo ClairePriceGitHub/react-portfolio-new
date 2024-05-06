@@ -1,10 +1,18 @@
 export const theme = {
     primaryDark: 'black',
     primaryLight: 'white',
+
     secondaryDark: 'darkgrey',
-    secondaryLight: 'lightgrey',
-    tertiaryDark: '#feb186',
-    tertiaryLight: '#ffcc99',
+    // warm light grey
+    secondaryLight: '#bca993',
+
+    // green
+    tertiaryDark: '#333300',
+    // red
+    tertiaryLight: '#ff4d4d',
+    // pink
+    background: '#f4e1dc',
+    
     primaryBorder: '20px solid black',
     primarySpacing: '20px',
 }

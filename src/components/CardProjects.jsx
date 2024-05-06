@@ -27,8 +27,7 @@ function CardProjects(props) {
 }
 
 const Card = styled.div`
-    background-color: ${({theme}) => theme.tertiaryDark};
-    border: 5px solid black;
+    background-color: ${({theme}) => theme.secondaryDark};
     min-width: 25%;
     margin: 1% 1%;
     padding: 15px 5px;
@@ -40,7 +39,7 @@ const Card = styled.div`
         width: 40%;
     }
     @media (max-width: 580px) {
-        width: 80%;
+        width: 100%;
     }
 `;
 
@@ -59,7 +58,7 @@ const TextWrapper = styled.div`
     `;
 
 const Title = styled.h3`
-    color: black;
+    color: ${({theme}) => theme.primaryLight};
     text-align: center;
     `;
 
@@ -69,20 +68,22 @@ const TextP = styled.p`
 `;
 
 const LinkA = styled.a`
-    // text-decoration: none;
+    text-decoration-color: black;
     `;
 
 const Button = styled.button`
     width: 90%;
     border: none;
+    border-radius: 10px;
     padding: 10px 0px;
-    background-color: ${({theme}) => theme.secondaryLight};
-    outline: 4px solid black;
+    color: ${({theme}) => theme.primaryLight};
+    background-color: ${({theme}) => theme.tertiaryDark};
+    outline: 2px solid white;
     padding: 0px;
 
     &:hover {
-        outline: 4px solid white;
-        background-color: ${({theme}) => theme.secondaryDark};
+        outline: 2px solid white;
+        background-color: ${({theme}) => theme.tertiaryLight};
         color: white
     }
 `;

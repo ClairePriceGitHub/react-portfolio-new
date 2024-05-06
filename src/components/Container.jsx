@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: ${({theme}) => theme.background};    
     padding: ${({theme}) => theme.primarySpacing};
 `;
 

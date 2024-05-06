@@ -20,7 +20,7 @@ const OuterWrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    background-color: none;
+    // background-color: ${({theme}) => theme.background};
     height: 100px;
     border-left: ${({ theme }) => theme.primaryBorder};
     border-right: ${({ theme }) => theme.primaryBorder};
@@ -47,7 +47,7 @@ const StyledLink = styled(Link)`
     text-decoration: none;
 `;
 
-const Header = styled.h1`
+const Header = styled.h2`
     color: ${({ theme }) => theme.primaryDark};
     padding-left: ${({theme}) => theme.primarySpacing};
     padding-bottom: 10px;

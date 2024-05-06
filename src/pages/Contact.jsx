@@ -8,27 +8,27 @@ function Contact() {
         <SectionWrapper>
             
                 <Intro>
-                    I would love to hear from you with work or other general queries, please do get in touch!
+                    I would love to hear from you with any queries, please do get in touch!
                 </Intro>
                 <ContactGrid action="#">
                     <FirstName>
-                        <label htmlFor="firstName"><h3>First Name *</h3></label>
+                        <label htmlFor="firstName"><h4>First Name *</h4></label>
                         <Input type="text" id="firstName" placeholder="" name="firstName" required />
                     </FirstName>
                     <LastName>
-                        <label htmlFor="lastName"><h3>Last Name *</h3></label>
+                        <label htmlFor="lastName"><h4>Last Name *</h4></label>
                         <Input type="text" id="lastName" placeholder="" name="lastName" required />
                     </LastName>
                     <Email>
-                        <label htmlFor="email" ><h3>Your email *</h3></label>
+                        <label htmlFor="email" ><h4>Your email *</h4></label>
                         <Input type="email" id="email" placeholder="" name="email" required />
                     </Email>
                     <Subject>
-                        <label htmlFor="subject"><h3>Subject *</h3></label>
+                        <label htmlFor="subject"><h4>Subject *</h4></label>
                         <Input type="text" id="subject" placeholder="" name="subject" required />
                     </Subject>
                     <Message>
-                        <label htmlFor="message" ><h3>Your message *</h3></label>
+                        <label htmlFor="message" ><h4>Your message *</h4></label>
                         <MessageBox id="message" rows="6" placeholder="" name="message" required></MessageBox>
                     </Message>
                     <Button>
@@ -42,19 +42,20 @@ function Contact() {
 
 const SectionWrapper = styled.div`
     min-height: calc(100vh - 300px);
-    background-color: #ffcc99;
     background-color: ${({theme}) => theme.tertiaryLight};
-    border: 20px solid white;
+    border: 20px solid ${({theme}) => theme.background};
     padding: 20px;
     
 
     @media (max-width: 767px) {
+        min-height: calc(100vh - 300px);
         height: auto;
     }
 `;
 
-const Intro = styled.h3`
+const Intro = styled.p`
     text-align: center;
+    
 `;
 
 const Input = styled.input`

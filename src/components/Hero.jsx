@@ -6,20 +6,21 @@ function Hero() {
     return (
         <OuterWrapper>
             <InnerWrapper>
-            <FirstName>CLAIRE</FirstName>
+            {/* <FirstName>CLAIRE</FirstName> */}
+            <LastName> CLAIRE PRICE</LastName>
                 <Logo src={cp} alt='Photo of Claire Price' />
                 {/* <HeroImage src={hero} alt='Photo of Claire Price' /> */}
                 {/* <Logo2 src={cp} alt='Photo of Claire Price' />
                 <Logo3 src={cp} alt='Photo of Claire Price' /> */}
                 {/* <Logo4 src={cp} alt='Photo of Claire Price' /> */}
-                <LastName>PRICE</LastName>
+                
             </InnerWrapper>
         </OuterWrapper>
     )
 }
 
 const OuterWrapper = styled.div`
-    background-color: ${({ theme }) => theme.secondaryLight};
+    background-color: ${({ theme }) => theme.tertiaryLight};
     height: calc(100vh - 260px);
     border: 20px solid white;
     display: flex;
@@ -32,22 +33,13 @@ const OuterWrapper = styled.div`
 `;
 
 const InnerWrapper = styled.div`
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    ' firstName logo lastName ';
+    width: 100%;
 
     @media (max-width: 767px) {
-        display: grid;
         
-        grid-template-columns: 1fr 20px 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-        ' logo logo logo '
-        ' firstName . lastName ';
     }
 `;
 
@@ -70,7 +62,7 @@ const FirstName = styled.h1`
 `;
 const Logo = styled.img`
 // max-width: 1000px;
-    grid-area: logo;
+    // grid-area: logo;
     animation-name: ${logoAnimation};
     animation-delay: 750ms;
     animation-timing-function: linear;
@@ -78,7 +70,8 @@ const Logo = styled.img`
     animation-iteration-count: 1;
 `;
 const LastName = styled.h1`
-    grid-area: lastName;
+    // grid-area: lastName;
+    color: white;
 `;
 
 export default Hero;

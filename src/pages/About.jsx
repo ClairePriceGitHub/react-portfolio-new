@@ -1,42 +1,114 @@
 import React from 'react';
 import styled from 'styled-components';
 import profile from '../assets/images/01-claire-price.jpg';
+import bgRecycledMah from '../assets/images/background-recycled-mahogany.jpg';
 
 function About() {
     return (
         <Container>
-            <Photo src={profile} alt='Photo of Claire Price' />
-            <h1>claire.price@mail.com</h1>
-            <p>Software Engineer specialising in front-end web development. I have a background in design.</p>
-            <p>Claire Price</p>
-            <p>Cheshire, UK</p>
+            {/* <BgImage src={bgRecycledMah} alt="textured background" /> */}
+            <InnerWrapper>
+                
+                <Text>
+                    <h1>CLAIRE PRICE</h1>
+                    <DetailsWrapper>
+                        <p>I'm a front-end web developer with a background in design.</p>
+                        <p>I would like to make a positive impact on people and businesses through web development.</p>
+                        <p>I'm motivated to keep learning and to keep developing new skills.</p>
+                    </DetailsWrapper>
+                    <DetailsWrapper>
+                        <h4>claire.price@mail.com</h4>
+                        <h4>Cheshire, UK</h4>
+                    </DetailsWrapper>
+                </Text>
+                <Photo src={profile} alt='Photo of Claire Price' />
+            </InnerWrapper>
         </Container>
     )
 }
 
 const Container = styled.div`
-    height: calc(100vh - 260px);
-    background-color: ${({theme}) => theme.tertiaryLight};
-    border: 20px solid white;
+    height: calc(100vh - 300px);
+    background-color: ${({theme}) => theme.tertiaryDark};
+    border: 20px solid ${({theme}) => theme.background};
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 
     @media (max-width: 767px) {
-        height: calc(100vh - 210px);
+        min-height: calc(100vh - 300px);
+        height: auto;
+     }
+`;
+
+// const BgImage = styled.img`
+//     object-fit: cover;
+// `;
+
+const InnerWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    width: 90%;
+
+    @media (max-width: 767px) {
+       flex-direction: column-reverse;
     }
 `;
 
 const Photo = styled.img`
-    width: 200px;
+    flex: 1;
+    width: 100px;
+    max-width: 300px;
     height: auto;
-    filter: grayscale(60%);
     aspect-ratio: 1/1;
+    padding: 20px;
+    filter: grayscale(80%);
     object-fit: cover;
     border-radius: 50%;
-    padding-top: 40px;
-    
-    
+
+    @media (max-width: 767px) {
+       flex: none;
+       width: 200px;
+    }
 `;
+
+const Text = styled.div`
+    flex: 2;
+    padding: 20px;
+
+    @media (max-width: 767px) {
+        text-align: center;
+        flex: 4;
+        padding: 0;
+    }
+
+    h3, h5, p, s {
+        margin: 0.5rem;
+        font-weight: normal;
+        color: white;
+    }
+
+    h1, h2 {
+        margin: 0.5rem;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+        color: white;
+    }
+
+    h4 {
+        margin: 0.5rem;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 0.2rem;
+    }
+   `;
+
+const DetailsWrapper = styled.div`
+    padding-top: 10px;
+`;
+
+
+
+
 
 export default About;
