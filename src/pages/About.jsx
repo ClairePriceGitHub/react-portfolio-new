@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import profile from '../assets/images/01-claire-price.jpg';
-import bgRecycledMah from '../assets/images/background-recycled-mahogany.jpg';
 
 function About() {
     return (
@@ -28,8 +27,8 @@ function About() {
 }
 
 const Container = styled.div`
-    height: calc(100vh - 300px);
-    background-color: ${({theme}) => theme.tertiaryDark};
+    height: calc(100vh - 320px);
+    background-color: ${({theme}) => theme.tertiaryLight};
     border: 20px solid ${({theme}) => theme.background};
     padding: 20px;
     display: flex;
@@ -40,10 +39,6 @@ const Container = styled.div`
         height: auto;
      }
 `;
-
-// const BgImage = styled.img`
-//     object-fit: cover;
-// `;
 
 const InnerWrapper = styled.div`
     display: flex;
@@ -106,9 +101,5 @@ const Text = styled.div`
 const DetailsWrapper = styled.div`
     padding-top: 10px;
 `;
-
-
-
-
 
 export default About;

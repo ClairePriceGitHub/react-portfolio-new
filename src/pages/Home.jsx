@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Hero from '../components/Hero';
 
 
 function Home() {
+    const [display, setDisplay] = useState(false);
+
     return (
         <>
-        <Hero />
+        <Hero display={display} setDisplay={setDisplay} />
         </>
     )
     

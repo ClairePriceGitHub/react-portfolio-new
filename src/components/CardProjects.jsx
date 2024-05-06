@@ -14,31 +14,36 @@ function CardProjects(props) {
     } 
 
     return (
-        <Card>
+        <Card onClick={(e) => handleClick(e)}>
             <Title>{data.title}</Title>
             <Image src={`./src/assets/images/${data.image}`} />
             <TextWrapper>
                 <LinkA href={data.linkDeployed} target="_blank" rel="noreferrer noopener"><TextP>Deployed Application</TextP></LinkA> 
                 <LinkA href={data.linkRepo} target="_blank" rel="noreferrer noopener"><TextP>GitHub Repository</TextP></LinkA>
             </TextWrapper>
-            <Button type="button" onClick={(e) => handleClick(e)}><h3>MORE INFO</h3></Button>
         </Card>
     );
 }
 
 const Card = styled.div`
-    background-color: ${({theme}) => theme.secondaryDark};
+    background-color: ${({theme}) => theme.background};
     min-width: 25%;
     margin: 1% 1%;
     padding: 15px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 20px solid ${({theme}) => theme.tertiaryDark};
 
-    @media (max-width: 767px) {
+    &:hover {
+        background-color: ${({theme}) => theme.primaryLight};
+        border: 20px solid ${({theme}) => theme.primaryDark};
+    }
+
+    @media (max-width: 907px) {
         width: 40%;
     }
-    @media (max-width: 580px) {
+    @media (max-width: 720px) {
         width: 100%;
     }
 `;
@@ -58,7 +63,7 @@ const TextWrapper = styled.div`
     `;
 
 const Title = styled.h3`
-    color: ${({theme}) => theme.primaryLight};
+    color: ${({theme}) => theme.primaryDark};
     text-align: center;
     `;
 

@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
         // font-family: "Norwester", sans-serif;
         font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
     }
 

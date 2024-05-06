@@ -1,77 +1,143 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import cp from '../assets/images/logo-cp.png';
+import cpBlack from '../assets/images/logo-cp-black.png';
+import cpGreen from '../assets/images/logo-cp-green.png';
+import cpPink from '../assets/images/logo-cp-pink.png';
 
 function Hero() {
+    
+
     return (
         <OuterWrapper>
             <InnerWrapper>
-            {/* <FirstName>CLAIRE</FirstName> */}
-            <LastName> CLAIRE PRICE</LastName>
-                <Logo src={cp} alt='Photo of Claire Price' />
-                {/* <HeroImage src={hero} alt='Photo of Claire Price' /> */}
-                {/* <Logo2 src={cp} alt='Photo of Claire Price' />
-                <Logo3 src={cp} alt='Photo of Claire Price' /> */}
-                {/* <Logo4 src={cp} alt='Photo of Claire Price' /> */}
-                
+                <LastName> CLAIRE PRICE</LastName>
+                <LogoWrapper>
+                    <LogoBlack src={cpBlack} alt='Logo' />
+                    {/* <LogoGreen src={cpGreen} alt='Logo' /> */}
+                    {/* <LogoPink src={cpPink} alt='Logo' /> */}
+                </LogoWrapper>
             </InnerWrapper>
         </OuterWrapper>
     )
 }
 
 const OuterWrapper = styled.div`
-    background-color: ${({ theme }) => theme.tertiaryLight};
-    height: calc(100vh - 260px);
-    border: 20px solid white;
+    background-color: ${({ theme }) => theme.tertiaryDark};
+    height: calc(100vh - 280px);
+    border: 20px solid ${({ theme }) => theme.background};
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media (max-width: 767px) {
-        height: calc(100vh - 210px);
+        height: calc(100vh - 230px);
+        height: auto;
     }
 `;
 
 const InnerWrapper = styled.div`
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
 
     @media (max-width: 767px) {
-        
+        flex-direction: column-reverse;
     }
 `;
 
 const logoAnimation = keyframes`
-    0% { transform: rotate(0deg); }
-    13% { transform: rotate(90deg); }
-    25% { transform: rotate(180deg); }
-    38% { transform: rotate(270deg); }
-    50% { transform: rotate(360deg); }
-    63% { transform: rotate(450deg) scale(0.7); }
-    75% { transform: rotate(540deg) scale(0.7); }
-    88% { transform: rotate(630deg) scale(0.7); }
-    95% { transform: scale(0.9); }
-    100% { transform: rotate(720deg); }
+    0% { transform: scale(1); }
+    25% { transform: scale(1); }
+    38% { transform: scale(1); }
+    50% { transform: scale(1); }
+    63% { transform: scale(1); }
+    68% { transform: scale(1); }
+    88% { transform: scale(1); }
+    95% { transform: scale(1); }
+    100% { transform: scale(1); }
 `;
 
-const FirstName = styled.h1`
-    grid-area: firstName;
-    text-align: right;
-`;
-const Logo = styled.img`
-// max-width: 1000px;
-    // grid-area: logo;
+const LogoBlack = styled.img`
+    position: relative;
     animation-name: ${logoAnimation};
     animation-delay: 750ms;
-    animation-timing-function: linear;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
     animation-duration: 1500ms;
     animation-iteration-count: 1;
 `;
-const LastName = styled.h1`
-    // grid-area: lastName;
-    color: white;
+
+const logoGreenAnimation = keyframes`
+    0% { transform: scale(1); }
+    25% { transform: scale(1); }
+    38% { transform: scale(1); }
+    50% { transform: scale(1); }
+    63% { transform: scale(1); }
+    68% { transform: scale(1); }
+    88% { transform: scale(1); }
+    90% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 `;
+
+const LogoGreen = styled.img`
+    position: relative;
+    animation-name: ${logoGreenAnimation};
+    animation-delay: 750ms;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+`;
+
+const logoPinkAnimation = keyframes`
+    0% { transform: scale(1); }
+    25% { transform: scale(1); }
+    38% { transform: scale(1); }
+    50% { transform: scale(1); }
+    63% { transform: scale(1); }
+    68% { transform: scale(1); }
+    88% { transform: scale(1); }
+    95% { transform: scale(1); }
+    100% { transform: scale(1); }
+`;
+
+const LogoPink = styled.img`
+    position: relative;
+    animation-name: ${logoPinkAnimation};
+    animation-delay: 750ms;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+`;
+
+const textAnimation = keyframes`
+    0% { transform: scale(1); }
+    25% { transform: scale(1); }
+    38% { transform: scale(1); }
+    50% { transform: scale(1); }
+    63% { transform: scale(1); }
+    68% { transform: scale(1); }
+    88% { transform: scale(1); }
+    95% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+`;
+
+const LastName = styled.h1`
+    animation-name: ${textAnimation};
+    animation-delay: 750ms;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+    color: white;
+    margin: 3rem;
+    letter-spacing: 0.2rem;
+    z-index: 10;
+`;
+
+const LogoWrapper = styled.div`
+    position: absolute;
+`;
+
+
 
 export default Hero;

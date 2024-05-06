@@ -21,7 +21,7 @@ const OuterWrapper = styled.nav`
     justify-content: space-between;
     align-items: flex-end;
     // background-color: ${({theme}) => theme.background};
-    height: 100px;
+    height: 120px;
     border-left: ${({ theme }) => theme.primaryBorder};
     border-right: ${({ theme }) => theme.primaryBorder};
     
@@ -69,7 +69,7 @@ const Logo = styled.img`
     // animation-iteration-count: 1;
     width: auto;    
     height: 80px;
-    padding-left: ${({theme}) => theme.primarySpacing};
+    padding: ${({theme}) => theme.primarySpacing};
 
     &:hover {
         transform: scale(90%);
