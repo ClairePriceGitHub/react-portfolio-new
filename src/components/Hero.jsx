@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import cp from '../assets/images/logo-cp.png';
 import cpBlack from '../assets/images/logo-cp-black.png';
+import cpLeft from '../assets/images/logo-circle-left.png';
+import cpRight from '../assets/images/logo-circle-right.png';
 import cpGreen from '../assets/images/logo-cp-green.png';
 import cpPink from '../assets/images/logo-cp-pink.png';
 
@@ -23,7 +25,12 @@ function Hero() {
                     {show && <Name>CLAIRE PRICE</Name>}
                 </TextWrapper>
                 <LogoWrapper>
-                    <LogoBlack src={cpBlack} alt='Logo' />
+                    <LogoLeftWrapper>
+                        <LogoLeft src={cpLeft} alt='Logo' />
+                    </LogoLeftWrapper>
+                    <LogoRightWrapper>
+                        <LogoRight src={cpRight} alt='Logo' />
+                    </LogoRightWrapper>
                     {/* <LogoGreen src={cpGreen} alt='Logo' /> */}
                     {/* <LogoPink src={cpPink} alt='Logo' /> */}
                 </LogoWrapper>
@@ -51,6 +58,7 @@ const InnerWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 90%;
 
     @media (max-width: 767px) {
         flex-direction: column-reverse;
@@ -62,15 +70,8 @@ const TextWrapper = styled.div`
 `;
 
 const textAnimation = keyframes`
-    0% { transform: scale(1); }
-    25% { transform: scale(1); }
-    38% { transform: scale(1); }
-    50% { transform: scale(1); }
-    63% { transform: scale(1); }
-    68% { transform: scale(1); }
-    88% { transform: scale(1); }
-    95% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+    0% { opacity: 0%; }
+    100% { opacity: 100%; }
 `;
 
 const Name = styled.h1`
@@ -87,28 +88,53 @@ const Name = styled.h1`
 
 const LogoWrapper = styled.div`
     position: absolute;
+    display: flex;
+    width: 60%;
 `;
 
-const logoAnimation = keyframes`
-    0% { transform: scale(1); }
-    25% { transform: scale(1); }
-    38% { transform: scale(1); }
-    50% { transform: scale(1); }
-    63% { transform: scale(1); }
-    68% { transform: scale(1); }
-    88% { transform: scale(1); }
-    95% { transform: scale(1); }
-    100% { transform: scale(1); }
+const logoLeftAni = keyframes`
+    0% { justify-content: flex-end; }
+    100% { justify-content: flex-start; }
 `;
 
-const LogoBlack = styled.img`
-    
-    position: relative;
-    animation-name: ${logoAnimation};
+const LogoLeftWrapper = styled.div`
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    justify-content: flex-end;
+
+    animation-name: ${logoLeftAni};
     animation-delay: 750ms;
-    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    animation-timing-function: linear;
     animation-duration: 1500ms;
     animation-iteration-count: 1;
+`;
+
+const logoRightAni = keyframes`
+    0% { justify-content: flex-start; }
+    100% { justify-content: flex-end; }
+`;
+
+const LogoRightWrapper = styled.div`
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+
+    animation-name: ${logoRightAni};
+    animation-delay: 750ms;
+    animation-timing-function: linear;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+`;
+
+
+
+const LogoLeft = styled.img`
+    
+`;
+
+const LogoRight = styled.img`
+    
 `;
 
 export default Hero;
