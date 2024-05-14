@@ -42,6 +42,7 @@ const OuterWrapper = styled.div`
     @media (max-width: 767px) {
         display: flex;
         justify-content: space-between;
+        padding-bottom: ${({theme}) => theme.primarySpacing}; 
 
         &::after{content: ''; flex: 1}
     }

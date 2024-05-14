@@ -35,7 +35,7 @@ const Container = styled.div`
     justify-content: center;
 
     @media (max-width: 767px) {
-        min-height: calc(100vh - 300px);
+        min-height: calc(100vh - 280px);
         height: auto;
      }
 `;
