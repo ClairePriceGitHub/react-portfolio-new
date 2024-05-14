@@ -1,38 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
-import cp from '../assets/images/logo-cp.png';
-import cpBlack from '../assets/images/logo-cp-black.png';
+import styled from 'styled-components';
 import cpLeft from '../assets/images/logo-circle-left.png';
 import cpRight from '../assets/images/logo-circle-right.png';
-import cpGreen from '../assets/images/logo-cp-green.png';
-import cpPink from '../assets/images/logo-cp-pink.png';
 
 function Hero() {
-    
     const [show, setShow] = useState(false);
+    const [opacity, setOpacity] = useState(false);
+    const [moveLeft, setMoveLeft] = useState(false);
+    const [moveRight, setMoveRight] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setShow(true);
-        }, 2000);
+            setOpacity(true);
+            setMoveLeft(true);
+            setMoveRight(true);
+        }, 500);
         return () => clearTimeout(timer);
     });
 
     return (
         <OuterWrapper>
             <InnerWrapper>
-                <TextWrapper>
-                    {show && <Name>CLAIRE PRICE</Name>}
+                <TextWrapper show={show} opacity={opacity}>
+                    <Name>CLAIRE PRICE</Name>
                 </TextWrapper>
                 <LogoWrapper>
-                    <LogoLeftWrapper>
-                        <LogoLeft src={cpLeft} alt='Logo' />
+                    <LogoLeftWrapper moveLeft={moveLeft}>
+                        <LogoLeft src={cpLeft} alt='Logo' moveLeft={moveLeft} />
                     </LogoLeftWrapper>
-                    <LogoRightWrapper>
-                        <LogoRight src={cpRight} alt='Logo' />
+                    <LogoRightWrapper moveRight={moveRight}>
+                        <LogoRight src={cpRight} alt='Logo' moveRight={moveRight} />
                     </LogoRightWrapper>
-                    {/* <LogoGreen src={cpGreen} alt='Logo' /> */}
-                    {/* <LogoPink src={cpPink} alt='Logo' /> */}
                 </LogoWrapper>
             </InnerWrapper>
         </OuterWrapper>
@@ -67,22 +66,14 @@ const InnerWrapper = styled.div`
 
 const TextWrapper = styled.div`
     position: relative;
-`;
-
-const textAnimation = keyframes`
-    0% { opacity: 0%; }
-    100% { opacity: 100%; }
+    opacity: ${({ opacity }) => (opacity ? '1' : '0')};
+    transition: opacity 1s ease-in-out;
 `;
 
 const Name = styled.h1`
-    animation-name: ${textAnimation};
-    animation-delay: 750ms;
-    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-    animation-duration: 1500ms;
-    animation-iteration-count: 1;
     color: white;
     margin: 3rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.6rem;
     z-index: 10;
 `;
 
@@ -92,49 +83,22 @@ const LogoWrapper = styled.div`
     width: 60%;
 `;
 
-const logoLeftAni = keyframes`
-    0% { justify-content: flex-end; }
-    100% { justify-content: flex-start; }
-`;
-
 const LogoLeftWrapper = styled.div`
     display: flex;
     flex-grow: 1;
-    justify-content: flex-start;
-    justify-content: flex-end;
-
-    animation-name: ${logoLeftAni};
-    animation-delay: 750ms;
-    animation-timing-function: linear;
-    animation-duration: 1500ms;
-    animation-iteration-count: 1;
-`;
-
-const logoRightAni = keyframes`
-    0% { justify-content: flex-start; }
-    100% { justify-content: flex-end; }
+    justify-content: ${({ moveLeft }) => (moveLeft ? 'flex-start' : 'flex-end')};
 `;
 
 const LogoRightWrapper = styled.div`
     display: flex;
     flex-grow: 1;
-    justify-content: flex-start;
-
-    animation-name: ${logoRightAni};
-    animation-delay: 750ms;
-    animation-timing-function: linear;
-    animation-duration: 1500ms;
-    animation-iteration-count: 1;
+    justify-content: ${({ moveRight }) => (moveRight ? 'flex-end' : 'flex-start')};
 `;
-
-
 
 const LogoLeft = styled.img`
-    
 `;
 
-const LogoRight = styled.img`
-    
+const LogoRight = styled.img` 
 `;
 
 export default Hero;

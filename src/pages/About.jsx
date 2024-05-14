@@ -86,7 +86,7 @@ const Text = styled.div`
     h1, h2 {
         margin: 0.5rem;
         font-weight: bold;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.6rem;
         color: white;
     }
 
